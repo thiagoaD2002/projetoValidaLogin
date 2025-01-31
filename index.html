@@ -17,32 +17,69 @@
 
         <section class="Secformulario">
             <div class="imgBackground">
-
+               
             </div>
 
-            <h2>Create Account</h2>
+            
+            <form class="formulario formCreate">
+                <h2>Create Account</h2>
 
-            <form class="formulario">
                 <div class="divUsuario">
                     <label for="iUsuario"><ion-icon name="person-outline" class="icons">#</ion-icon></label>
-                    <input type="text" name="usuario" id="iUsuario">
+                    <input type="text" name="usuario" id="iUsuario" required placeholder="Username">
                 </div>
+                
+                <p class="textWrongUsername textWrongStyle">Username requires: ". , 123 @". Min: 8</p>
+
                 <div class="divEmail">
                     <label for="iEmail"><ion-icon name="mail-outline" class="icons">#</ion-icon></label>
-                    <input type="email" name="email" id="iEmail">
-                </div>
-                <div class="divSenha">
-                    <label for="iSenha"><ion-icon name="lock-closed-outline" class="icons">#</ion-icon></label>
-                    <input type="password" name="senha" id="iSenha">
+                    <input type="email" name="email" id="iEmail" required placeholder="E-mail" >
+                    
                 </div>
 
+                <p class="textWrongEmail textWrongStyle">Email is invalid!</p>
+
+                <div class="divSenha">
+                    <label for="iSenha"><ion-icon name="lock-closed-outline" class="icons">#</ion-icon></label>
+                    <input type="password" name="senha" id="iSenha" required placeholder="Password">
+                </div>
+                <p class=" textWrongPassword textWrongStyle">Password requires: ". , 123 @". Min: 8</p>
                 <button type="submit" class="btnSubmit">Submit</button>
 
                 <div class="btnsSocial">
                     <button type="submit"><ion-icon name="logo-google">#</ion-icon></button>
                     <button type="submit"><ion-icon name="logo-microsoft">#</ion-icon></button>
                 </div>
+            
+            </form> 
+
+            <form class="formulario formLogin">
+                <h2>Log In</h2>
+
+                <div class="divUsuario">
+                    <label for="iUsername"><ion-icon name="person-outline" class="icons">#</ion-icon></label>
+                    <input type="text" name="usuario" id="iUsername" autocomplete="off" placeholder="Username">
+                </div>
+                <div class="divSenha">
+                    <label for="iPassword"><ion-icon name="lock-closed-outline" class="icons">#</ion-icon></label>
+                    <input type="password" name="senha" id="iPassword" autocomplete="off" placeholder="Password">
+                </div>
+
+                <p class="textWrond textWrongStyle">Username or Password Invalid!</p>
+
+                <button type="submit" class="btnLogin">Log In</button>
+
+                <div class="btnsSocial">
+                    <button type="submit"><ion-icon name="logo-google">#</ion-icon></button>
+                    <button type="submit"><ion-icon name="logo-microsoft">#</ion-icon></button>
+                </div>
             </form>
+            
+            <section class="server">
+                <h2>Bem vindo á nossa plataforma, desenvolvida e criada para sua melhor experiência</h2>
+                <div><ion-icon name="refresh-circle-outline" class="reverseIcon"></ion-icon></div>
+            </section>
+
 
         </section>
 

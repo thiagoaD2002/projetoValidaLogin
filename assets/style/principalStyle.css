@@ -41,9 +41,9 @@ header > h1{
 
 main{
     background-image: linear-gradient(145deg, #59A2EB 50%, #f8f8f8 90%);
-   
-
-
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
 
 h2{
@@ -52,4 +52,218 @@ h2{
 
 .Secformulario{
     background-color: #f8f8f8;
+    width: 800px;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px .5px #44444442;
+    transition: .5s;
+
+    display: grid;
+    align-items: center;
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "form img";
+}
+.imgBackground{
+    height: 100%;
+    border-radius: 0px 10px 10px 0px;
+
+    background-image: url(../midia/pexels-shkrabaanthony-5244024.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    /* transition: .3s; */
+    grid-area: img;
+    
+    
+}
+h2{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    color: #444;
+
+}
+.formulario{
+    padding: 5px;
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    
+   
+}
+.formulario > div{
+    margin-top: 15px;
+    margin-left: 15px;
+    
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+.formCreate, .formLogin, .server{
+   margin: auto;
+
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #444;
+    
+ }
+ 
+ label{
+    display: inline-block;
+}
+.formulario  input{
+    width: 250px;
+    height: 26px;
+    border-radius: 5px;
+    border: 1px ridge #4444447c;
+    text-indent: 5px;
+    
+}
+.textWrond,.textWrongEmail,.textWrongUsername, .textWrongPassword{
+    display: none;
+}
+.btnSubmit{
+    height: 25px;
+    width: 120px;
+    margin-top: 25px;
+    align-self: center;
+
+    background-color: #0260F5;
+    color: #f8f8f8;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px .5px #3333335c;
+    cursor: pointer;
+    transition: .2s;
+}
+.btnSubmit:hover{
+    background-color: #025ff5cd;
+
+}
+.btnsSocial{
+    align-self: center;
+}
+.btnsSocial > button{
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px .5px #3333335c;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444;
+
+    transition: .2s;
+}
+.btnsSocial > button:hover{
+    background-color: #33333317;
+}
+.formLogin{
+    display: none;
+    transition: .3s;
+    grid-area: img;
+}
+.btnLogin{
+    height: 25px;
+    width: 120px;
+    margin-top: 25px;
+    align-self: center;
+
+    background-color: #0260F5;
+    color: #f8f8f8;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px .5px #3333335c;
+    cursor: pointer;
+    transition: .2s;
+}
+.btnLogin:hover{
+    background-color: #025ff5cd;
+}
+.textWrongStyle{
+    margin-top: 10px;
+    margin-left: 15px;
+    font-size: 12px;
+    color: tomato;
+    transition: .5s;
+}
+.server {
+    display: none;
+    font-size: .9em;
+    animation: formLogin linear .5s forwards;
+    width: 350px;
+ }
+ .server> div{
+    display: flex;
+    align-items: center;
+}
+.reverseIcon{
+    width: 80px;
+    height: 80px;
+    margin: 10px auto;
+    
+ }
+ 
+ .formCreateOff{
+     display: none;
+ }
+ .formLoginOn{
+    display: flex;
+    animation: formLoginImg linear .3s forwards;
+}
+.textWrondOn{
+    display: block;
+}
+.imgBackgroundLogin{
+    background-image: url(../midia/pexels-shvetsa-12662809.jpg);
+    grid-area: form;
+    border-radius: 10px 0px 0px 10px;
+    animation: imgLogin linear .3s forwards;
+}
+
+@keyframes formLogin{
+    from{
+        opacity: 0;
+        transform: translate3d(0px, -18px, 0px);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0px, 0px, 0px);
+    }
+}
+
+@keyframes formLoginImg{
+    from{
+        opacity: 0;
+        transform: translate3d(-20px, 0px, 0px);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0px, 0px, 0px);
+    } 
+}
+@keyframes imgLogin{
+    from{
+        opacity: 0;
+        transform: translate3d(20px, 0px, 0px);
+    }
+    to{
+        opacity: 1;
+        transform: translate3d(0px, 0px, 0px);
+    }
+}
+
+p{
+    font-family: var(--fontLogin);
+    transition: .5s;
 }

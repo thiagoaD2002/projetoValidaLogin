@@ -1,28 +1,17 @@
 @media screen and (max-width:700px){
 
   
-    main{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-     
-     }
-     
 
     .Secformulario{
+        display: block;
         width: 350px;
         height: 500px;
-
-        
-        border-radius: 15px;
-
-        box-shadow: 2px 2px 5px .5px #44444442;
-
     }
 
 
     .imgBackground{
         height: 40%;
+        width: 100%;
         border-radius: 15px 15px 0 0;
 
         background-image: url(../midia/pexels-shkrabaanthony-5244024.jpg);
@@ -30,90 +19,107 @@
         background-size: cover;
     }
 
-    h2{
-        margin-top: 10px;
-        text-align: center;
-        font-size: 1.2em;
-        color: #444;
 
-    }
-
-   
-    .formulario{
-        padding: 5px;
-        display: flex;
-        flex-direction: column;
-       
-    }
-
-    .formulario > div{
-        margin-top: 15px;
-        margin-left: 15px;
-        
-
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 5px;
-    }
+  
 
 
     .icons{
        display: flex;
        justify-content: center;
        align-items: center;
+       color: #444;
        
     }
 
     label{
         display: inline-block;
-        
-        
-      
     }
     
     .formulario  input{
         width: 250px;
         height: 26px;
         border-radius: 5px;
-        border: 1px solid #444;
+        border: 1px ridge #4444447c;
         text-indent: 5px;
+        
     }
+
 
     .btnSubmit{
         height: 25px;
         width: 120px;
-        margin-top: 25px;
-        align-self: center;
-
-        background-color: #0260F5;
-        color: #f8f8f8;
-        border: none;
-        border-radius: 5px;
-        box-shadow: 1px 1px 3px .5px #3333335c;
-        cursor: pointer;
-
-        
     }
+
 
     .btnsSocial{
         align-self: center;
-        
-       
     }
     .btnsSocial > button{
         width: 100px;
         height: 25px;
-        border-radius: 5px;
-        box-shadow: 1px 1px 3px .5px #3333335c;
-        border: none;
-        cursor: pointer;
+    }
+    .formLogin{
+        display: none;
+        display: .5s;
+    }
 
+    .btnLogin{
+        height: 25px;
+        width: 120px;
+    }
+    .server {
+       display: none;
+       font-size: .9em;
+       animation: formLogin linear .5s forwards;
+    }
+    .server> div{
         display: flex;
         align-items: center;
-        justify-content: center;
     }
-   
 
+    .SecformularioOn{
+        height: 580px;
+    }
+    /* .textWrongEmailOn{
+        display: block;
+    } */
+    .formCreateOff{
+        display: none;
+    }
+    .formLoginOn{
+       display: flex;
+       animation: formLogin linear .3s forwards;
+   }
+   .textWrondOn{
+       display: block;
+   }
+   .imgBackgroundLogin{
+       background-image: url(../midia/pexels-shvetsa-12662809.jpg);
+       animation: imgLogin .3s linear forwards;
+   }
    
+    @keyframes formLogin{
+        from{
+            opacity: 0;
+            transform: translate3d(0px, -18px, 0px);
+        }
+        to{
+            opacity: 1;
+            transform: translate3d(0px, 0px, 0px);
+        }
+    }
+    @keyframes imgLogin{
+        from{
+            opacity: 0;
+            transform: translate3d(0px, 20px, 0px);
+        }
+        to{
+            opacity: 1;
+            transform: translate3d(0px, 0px, 0px);
+        }
+    }
+    p{
+        font-family: var(--fontLogin);
+        transition: .5s;
+    }
 }
